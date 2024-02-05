@@ -21,6 +21,7 @@ import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
 import { register } from "@/actions/register";
 
+
 export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
@@ -48,6 +49,15 @@ export const RegisterForm = () => {
     });
   };
 
+
+  // // Display Alert
+  // const displayAlert = () => {
+  //   const userData = form.getValues();
+  //   alert(JSON.stringify(userData, null, 2));
+  // };
+
+
+
   return (
     <CardWrapper
       headerLabel="Create an account"
@@ -57,6 +67,7 @@ export const RegisterForm = () => {
     >
       <Form {...form}>
         <form 
+          // onSubmit 📋
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-6"
         >
@@ -121,6 +132,8 @@ export const RegisterForm = () => {
             disabled={isPending}
             type="submit"
             className="w-full"
+            // Display Alert with userData 📋
+            // onClick={displayAlert}
           >
             Create an account
           </Button>

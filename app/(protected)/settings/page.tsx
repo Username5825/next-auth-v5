@@ -173,8 +173,11 @@ export default function SettingsPage () {
                         <SelectItem value={UserRole.ADMIN}>
                           Admin
                         </SelectItem>
-                        <SelectItem value={UserRole.USER}>
-                          User
+                        <SelectItem value={UserRole.HOTELIER}>
+                          Hotelier
+                        </SelectItem>
+                        <SelectItem value={UserRole.CONSULTANT}>
+                          Consultant
                         </SelectItem>
                       </SelectContent>
                     </Select>

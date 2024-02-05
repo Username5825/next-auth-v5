@@ -152,7 +152,7 @@ export default function SettingsPage () {
                 </>
               )}
               {/* 💡 Credentials only 👆 */}
-              {/* 5️⃣ ADMIN or USER */}
+              {/* 5️⃣ USER ROLE */}
               <FormField
                 control={form.control}
                 name="role"

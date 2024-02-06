@@ -38,7 +38,6 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
   const verificationToken = await generateVerificationToken(email);
   
   // 📂 @lib/mail.ts
-  // TODO: 🔶 DOES NOT CREATE VERIF ☑️🪙 IN THE DB (JUST THE URL) 🔶
   await sendVerificationEmail(
     verificationToken.email,
     verificationToken.token,
